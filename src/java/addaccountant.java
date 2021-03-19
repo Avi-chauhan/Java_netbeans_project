@@ -10,13 +10,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Admin
  */
-public class Login extends HttpServlet {
+public class addaccountant extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -27,10 +26,9 @@ public class Login extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    public void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-       
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -43,7 +41,7 @@ public class Login extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
@@ -60,58 +58,34 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-         try (PrintWriter out = response.getWriter()) {
-           
-            
-            String role=request.getParameter("Person");
-            String email=request.getParameter("email");
-            String password=request.getParameter("password");
-                        
-            
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Redirected after Login</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            
-            if("Accountant".equals(role))
-            {                  
-                		boolean status=acc_db.validate(email, password);
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title>Accountant Added</title>");
 
-		if(status){
-			HttpSession session=request.getSession();
-			session.setAttribute("accountant",role);
-                        out.println("<p>Accountant Login Successful.....</p>");
-			request.getRequestDispatcher("accountantportal.html").forward(request, response);
-		}else{
-			
-			out.println("<p>Sorry, username or password error!</p>");
-			request.getRequestDispatcher("index.html").include(request, response);
-		}
-                
-                
-            }
-            else if("Admin".equals(role))
-            {
-                
-		if(email.equals("admin@gmail.com")&&password.equals("123456")){
-			HttpSession session=request.getSession();
-			session.setAttribute("admin",role);
-                        out.println("<p>Admin Login Successful.....</p>");
-			request.getRequestDispatcher("adminportal.html").forward(request, response);
-		}else{
-			out.println("<p>Sorry, username or password error!</p>");
-			request.getRequestDispatcher("index.html").include(request, response);
-		}
-
-            }
-
-            out.println("</body>");
-            out.println("</html>");      
-            out.close();
+		out.println("</head>");
+		out.println("<body>");
+		
+		String name=request.getParameter("name");
+	 	String email=request.getParameter("email");
+		String password=request.getParameter("password");
+		String address=request.getParameter("address");
+		String contact=request.getParameter("contact");
+		
+		acc_info bean=new acc_info(name, email, password, address, contact);
+		int status=acc_db.save(bean);
+		
+		
+		out.println("<p>Accountant is added successfully!</p>");
+		request.getRequestDispatcher("addaccountant.html").include(request, response);
+		
+		out.println("</body>");
+		out.println("</html>");
+		
+		out.close();
         }
     }
 

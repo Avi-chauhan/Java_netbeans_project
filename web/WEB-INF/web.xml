@@ -4,9 +4,33 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>adminlogout</servlet-name>
+        <servlet-class>adminlogout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>accountantlogout</servlet-name>
+        <servlet-class>accountantlogout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>addaccountant</servlet-name>
+        <servlet-class>addaccountant</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adminlogout</servlet-name>
+        <url-pattern>/adminlogout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>accountantlogout</servlet-name>
+        <url-pattern>/accountantlogout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addaccountant</servlet-name>
+        <url-pattern>/addaccountant</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
