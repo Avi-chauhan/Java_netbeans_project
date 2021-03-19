@@ -16,6 +16,22 @@
         <servlet-name>addaccountant</servlet-name>
         <servlet-class>addaccountant</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>viewaccountant</servlet-name>
+        <servlet-class>viewaccountant</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editaccform</servlet-name>
+        <servlet-class>editaccform</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editacc</servlet-name>
+        <servlet-class>editacc</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>deleteaccountant</servlet-name>
+        <servlet-class>deleteaccountant</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -31,6 +47,22 @@
     <servlet-mapping>
         <servlet-name>addaccountant</servlet-name>
         <url-pattern>/addaccountant</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewaccountant</servlet-name>
+        <url-pattern>/viewaccountant</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editaccform</servlet-name>
+        <url-pattern>/editaccform</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editacc</servlet-name>
+        <url-pattern>/editacc</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>deleteaccountant</servlet-name>
+        <url-pattern>/deleteaccountant</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
