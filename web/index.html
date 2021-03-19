@@ -9,25 +9,51 @@ and open the template in the editor.
         <title>Fee Management</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
-        
+    <center>
         <h2> Login Form </h2>
-
-
-
-<form action="Login" method="post">
-    Choose Role :
-<select name="Person">
-  <option name="Person" value="Accountant">Accountant</option>
-  <option name="Person" value="Admin">Admin</option>
-</select>
+        <form action="Login" method="post" >
+      <br><br><br>
+    
+      <h4>Choose Role:</h4>
+    
+<div class="form-check-inline">
+      <label class="form-check-label" for="radio1" >
+        <input type="radio" class="form-check-input" id="radio1" name="Person" value="Accountant">Accountant
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <label class="form-check-label" for="radio2">
+          <input type="radio" class="form-check-input" id="radio2" name="Person" value="Admin" >Admin
+      </label>
+    </div>
+    
     <br>
     <br>
-    Email: <br>       <input type="email" name="email"  required><br>
-    Password:<br>     <input type="password" name="password" required><br><br>
-<input type="submit"  value="Login">
+
+    <div class="form-group column">
+                    <div class="col-sm-3">
+                        <label for="inputFirstname">Email:</label>
+                        <input type="text" class="form-control" id="inputFirstname" name="email" placeholder="Email">
+                    </div>
+                    <br>
+                    <div class="col-sm-3">
+                        <label for="inputLastname">Password :</label>
+                        <input type="password" class="form-control" id="inputLastname" name="password" placeholder="password">
+                    </div>
+                    <br>
+                    <div class="col-sm-3">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+ 
+
 </form>
-        
+    </center>
     </body>
 </html>

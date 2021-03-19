@@ -65,7 +65,11 @@ public class addaccountant extends HttpServlet {
 		out.println("<html>");
 		out.println("<head>");
 		out.println("<title>Accountant Added</title>");
-
+                out.println("<meta name='viewport' content=\"width=device-width, initial-scale=1.0\">");
+               out.println( "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
+  out.println("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>");
+ out.println("<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>");
+ out.println("<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>");
 		out.println("</head>");
 		out.println("<body>");
 		
