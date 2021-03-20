@@ -59,22 +59,30 @@ public class viewaccountant extends HttpServlet {
 		 out.println("<meta name='viewport' content=\"width=device-width, initial-scale=1.0\">");
                out.println( "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
   out.println("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>");
- out.println("<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>");
- out.println("<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>");
-		out.println("</head>");
-		out.println("<body>");
-		request.getRequestDispatcher("adminportal.html").include(request, response);
-		
-		out.print("<h1>View Accountant</h1>");
-	
+  out.println("<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>");
+  out.println("<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>");
+  out.println("<script src=\"https://code.iconify.design/1/1.0.7/iconify.min.js\"></script>");
+ 		
+                out.println("</head>");
+		out.println("<body><br><br>");
+//		request.getRequestDispatcher("adminportal.html").include(request, response);
+		out.print("<center>");
+		out.print("<h1>View Accountant(s)</h1>");
+                out.print("<br>");
+                out.print("<a class='btn btn-primary' href='adminportal.html' >");
+               out.print("<span class=\"iconify\" data-icon=\"clarity:home-solid\" data-inline=\"false\"></span> Home</a>");
+	        
+               out.println("</center>");
 		List<acc_info> list=acc_db.getAllRecords();
-		out.println("<table >");
-		out.print("<tr><th>Id</th><th>Name</th><th>Email</th><th>Password</th><th>address</th><th>contact</th><th>Edit</th><th>Delete</th>");
+                out.print("<br>");
+                out.print("<div class=\"table table-striped\">");
+		out.println("<table class=\"table\">");
+		out.print("<tr><th>Id</th><th>Name</th><th>Email</th><th>Password</th><th>Address</th><th>Contact</th><th>Edit</th><th>Delete</th>");
 		for(acc_info bean:list){
-			out.print("<tr><td>"+bean.getId()+"</td><td>"+bean.getName()+"</td><td>"+bean.getEmail()+"</td><td>"+bean.getPassword()+"</td><td>"+bean.getAddress()+"</td><td>"+bean.getContact()+"</td><td><a href='editaccform?id="+bean.getId()+"'>Edit</a></td><td><a href='deleteaccountant?id="+bean.getId()+"'>Delete</a></td></tr>");
+			out.print("<tr class=\"success\"><td>"+bean.getId()+"</td><td>"+bean.getName()+"</td><td>"+bean.getEmail()+"</td><td>"+bean.getPassword()+"</td><td>"+bean.getAddress()+"</td><td>"+bean.getContact()+"</td><td><a class=\"btn btn-info\" href='editaccform?id="+bean.getId()+"'><span class=\"iconify\" data-icon=\"fa-solid:edit\" data-inline=\"false\"></span> Edit</a></td><td><a class=\"btn btn-danger\" href='deleteaccountant?id="+bean.getId()+"'><span class=\"iconify\" data-icon=\"ic:baseline-delete\" data-inline=\"false\"></span> Delete</a></td></tr>");
 		}
 		out.println("</table>");
-			
+	        out.print("</div>");
 		out.println("</body>");
 		out.println("</html>");
 		

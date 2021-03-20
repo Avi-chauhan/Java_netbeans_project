@@ -13,16 +13,30 @@ and open the template in the editor.
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     </head>
     <body>
-        
-        <h1>Hi ! Admin !!</h1>
+    <center>
+        <h1>Welcome to Admin Portal!</h1>
+        <br><br>
+        <div class="container">
        
-        <ol>
+           <a class="btn btn-info" href="addaccountant.html" role="button">
+               <span class="iconify" data-icon="fluent:people-add-24-filled" data-inline="false">></span>
+               Add Accountant
+           </a>
+            <br><br>
+           <a class="btn btn-warning" href="viewaccountant" role="button">
+               <span class="iconify" data-icon="carbon:view-filled" data-inline="false"></span>
+               View Accountant
+           </a>
+            <br><br>
             
-        <li><a href="addaccountant.html">Add Accountant</a></li>
-        <li><a href="viewaccountant">View Accountant</a></li>
-        <li><a href="adminlogout" >Logout</a></li>
-        </ol>
+           <a class="btn btn-danger" href="adminlogout" >
+               <span class="iconify" data-icon="uil:sign-in-alt" data-inline="false"></span> Logout
+           </a>
+        </div>
+        
+    </center>
           </body>
 </html>

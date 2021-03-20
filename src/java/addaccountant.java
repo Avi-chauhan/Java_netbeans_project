@@ -81,9 +81,20 @@ public class addaccountant extends HttpServlet {
 		
 		acc_info bean=new acc_info(name, email, password, address, contact);
 		int status=acc_db.save(bean);
-		
-		
-		out.println("<p>Accountant is added successfully!</p>");
+                if(status==0)
+                {
+                 out.println("<div class=\"alert alert-danger alert-dismissible\">");
+                 out.println("<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>");
+                 out.println("<strong>Error while adding Accountant !!</strong>");
+                 out.println("</div>");
+                }
+                else
+                {
+                 out.println("<div class=\"alert alert-success alert-dismissible\">");
+                 out.println("<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>");
+                 out.println("<strong>Accountant added successfully !</strong>");
+                 out.println("</div>");
+                }
 		request.getRequestDispatcher("addaccountant.html").include(request, response);
 		
 		out.println("</body>");

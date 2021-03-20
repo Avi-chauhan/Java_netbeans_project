@@ -60,25 +60,49 @@ public class editaccform extends HttpServlet {
   out.println("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>");
  out.println("<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>");
  out.println("<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>");
-            out.println("</head>");
+ out.println("<script src='https://code.iconify.design/1/1.0.7/iconify.min.js'></script>");
+           
+ out.println("</head>");
             out.println("<body>");
+            out.println("<br>");
+            out.println("<center>");
             
-            request.getRequestDispatcher("adminportal.html").include(request, response);
+//            request.getRequestDispatcher("adminportal.html").include(request, response);
 		
 		
 		out.print("<h1>Edit Accountant Form</h1>");
-		out.print("<form action='editacc' method='post'>");
-		out.print("<table>");
-		out.print("<tr><td><input type='hidden' name='id' value='"+bean.getId()+"' /></td></tr>");
-		out.print("<tr><td>Name:</td><td><input type='text' name='name' value='"+bean.getName()+"'/></td></tr>");
-		out.print("<tr><td>Email:</td><td><input type='email' name='email' value='"+bean.getEmail()+"'/></td></tr>");
-		out.print("<tr><td>Password:</td><td><input type='text' name='password' value='"+bean.getPassword()+"'/></td></tr>");
-		out.print("<tr><td>Address:</td><td><textarea name='address' style='width:300px;height:100px;'>"+bean.getAddress()+"</textarea></td></tr>");
-		out.print("<tr><td>Contact No:</td><td><input type='text' name='contact' value='"+bean.getContact()+"'/></td></tr>");
-		out.print("<tr><td colspan='2' align='center'><input type='submit' value='Update Accountant' /></td></tr>");
-		out.print("</table>");
-		out.print("</form>");
+		out.print("<form action='editacc' method='post'> ");
+		out.print("<div class=\"form-group\">");
+		out.print("<input type='hidden' name='id' value='"+bean.getId()+"' />");
+                out.println("<div class=\"col-sm-3\">");
+		out.print("<label for=\"inputFirstname\">Name: </label><input type='text' class=\"form-control\" name='name' value='"+bean.getName()+"'/>");
+                out.println("</div>");
+                
+                out.println("<div class=\"col-sm-3\">");
+		out.print("<label for=\"b\">Email: </label><input id=\"b\" type='email' class=\"form-control\" name='email' value='"+bean.getEmail()+"'/>");
+		out.println("</div>");
+                
+                out.println("<div class=\"col-sm-3\">");
+                out.print("<label for=\"inputFirstname\">Password: </label><input id=\"inputFirstname\" class=\"form-control\" type='text' name='password' value='"+bean.getPassword()+"'/>");
+		out.println("</div>");
+                
+                out.println("<div class=\"col-sm-3\">");
+                out.print("<label for=\"d\">Address: </label><textarea name='address' class=\"form-control\" style='width:350px;height:100px;'>"+bean.getAddress()+"</textarea>");
+		out.println("</div>");
+                
+                out.println("<div class=\"col-sm-3\">");
+                out.print("<label for=\"c\">Contact: </label><input type='text' class=\"form-control\" name='contact' value='"+bean.getContact()+"'/>");
+		out.println("</div>");
+                out.print("</div>");
+                out.println("<br>");
+                out.println("<button class=\"btn btn-success\" type=\"submit\">\n" +
+"            <span class=\"iconify\" data-icon=\"bx:bxs-edit-alt\" data-inline=\"false\">\n" +
+"            </span>\n" +
+"            Update Accountant\n" +
+"        </button> ");
 		
+		out.print("</form>");
+		out.println("</center>");
             out.println("</body>");
             out.println("</html>");
         }
