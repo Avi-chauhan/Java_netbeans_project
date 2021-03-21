@@ -1,8 +1,30 @@
-<h1>Search Student</h1>
+<!Doctype html>
+<html>
+    <head>
+        <title> Search Here!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+   </head>
+   <body>
+   <center>
+       <br>
+   <h1>Find Student Here!</h1>
+   <br>
 <form action="searchstudent" method="post">
-    <a href="accountantportal.html" >Home</a>
-<table>
-<tr><td>Rollno:</td><td><input type="number" name="rollno" required/></td></tr>
-<tr><td colspan="2" align="center"><input type="submit" value="Search Student"/></td></tr>
-</table>
+    <a class='btn btn-primary btn-lg' href="accountantportal.html" >
+        <span class="iconify" data-icon="clarity:home-solid" data-inline="false"></span> Home
+    </a>
+    <br><br>
+    
+    <input class="form-control mr-sm-2 btn-lg" style="width:auto" type="number" name="rollno" placeholder="Search" aria-label="Search" required>
+    <br>
+    <button class="btn btn-outline-success my-2 my-sm-0 btn-lg" type="submit">Search Roll No:</button>
 </form>
+   </center>
+   </body>
+</html>

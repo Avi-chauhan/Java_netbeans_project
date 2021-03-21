@@ -51,17 +51,17 @@ public class editaccform extends HttpServlet {
         
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Edit accountant Form</title>"); 
-             out.println("<meta name='viewport' content=\"width=device-width, initial-scale=1.0\">");
-               out.println( "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
-  out.println("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>");
- out.println("<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>");
- out.println("<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>");
- out.println("<script src='https://code.iconify.design/1/1.0.7/iconify.min.js'></script>");
-           
+           out.println("<!DOCTYPE html>");
+           out.println("<html>");
+           out.println("<head>");
+           out.println("<title>Edit accountant Form</title>"); 
+           out.println("<meta name='viewport' content=\"width=device-width, initial-scale=1.0\">");
+           out.println( "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>");
+           out.println("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>");
+           out.println("<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>");
+           out.println("<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>");
+           out.println("<script src='https://code.iconify.design/1/1.0.7/iconify.min.js'></script>");
+
  out.println("</head>");
             out.println("<body>");
             out.println("<br>");
@@ -73,7 +73,7 @@ public class editaccform extends HttpServlet {
 		out.print("<h1>Edit Accountant Form</h1>");
 		out.print("<form action='editacc' method='post'> ");
 		out.print("<div class=\"form-group\">");
-		out.print("<input type='hidden' name='id' value='"+bean.getId()+"' />");
+		
                 out.println("<div class=\"col-sm-3\">");
 		out.print("<label for=\"inputFirstname\">Name: </label><input type='text' class=\"form-control\" name='name' value='"+bean.getName()+"'/>");
                 out.println("</div>");
@@ -89,6 +89,7 @@ public class editaccform extends HttpServlet {
                 out.println("<div class=\"col-sm-3\">");
                 out.print("<label for=\"d\">Address: </label><textarea name='address' class=\"form-control\" style='width:350px;height:100px;'>"+bean.getAddress()+"</textarea>");
 		out.println("</div>");
+                
                 
                 out.println("<div class=\"col-sm-3\">");
                 out.print("<label for=\"c\">Contact: </label><input type='text' class=\"form-control\" name='contact' value='"+bean.getContact()+"'/>");

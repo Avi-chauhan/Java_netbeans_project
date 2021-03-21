@@ -21,6 +21,8 @@
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
             <word>Admin</word>
+            <word>DJANGO</word>
+            <word>JS</word>
             <word>servlet</word>
         </spellchecker-wordlist>
     </configuration>

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-public class editstudent extends HttpServlet {
+public class editdb extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
@@ -29,7 +29,7 @@ public class editstudent extends HttpServlet {
 		
 		student_info bean=new student_info(rollno,name, email, sex, course, fee, paid, due, address, contact);
 		int status=student_db.update(bean);
-		response.sendRedirect("viewstudent");
+		response.sendRedirect("duefee");
 		
 		out.close();
 	}

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-public class editstudentform extends HttpServlet {
+public class editstudent1 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out=response.getWriter();
 		String srollno=request.getParameter("rollno");
@@ -35,7 +35,7 @@ public class editstudentform extends HttpServlet {
 		
 		
 		out.print("<h1>Edit Student Form</h1>");
-		out.print("<form action='editstudent' method='post'>");
+		out.print("<form action='editdb' method='post'>");
                 out.print("<div class=\"form-group\">");
                 
                 out.print("<div class=\"table table-striped\">");

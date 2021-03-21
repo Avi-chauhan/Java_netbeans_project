@@ -60,6 +60,14 @@
         <servlet-name>editstudentform</servlet-name>
         <servlet-class>editstudentform</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>editstudent1</servlet-name>
+        <servlet-class>editstudent1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editdb</servlet-name>
+        <servlet-class>editdb</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -119,6 +127,14 @@
     <servlet-mapping>
         <servlet-name>editstudentform</servlet-name>
         <url-pattern>/editstudentform</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editstudent1</servlet-name>
+        <url-pattern>/editstudent1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editdb</servlet-name>
+        <url-pattern>/editdb</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
