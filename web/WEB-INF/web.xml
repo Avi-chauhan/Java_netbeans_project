@@ -32,6 +32,34 @@
         <servlet-name>deleteaccountant</servlet-name>
         <servlet-class>deleteaccountant</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addstudent</servlet-name>
+        <servlet-class>addstudent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>viewstudent</servlet-name>
+        <servlet-class>viewstudent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>searchstudent</servlet-name>
+        <servlet-class>searchstudent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>duefee</servlet-name>
+        <servlet-class>duefee</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>deletestudent</servlet-name>
+        <servlet-class>deletestudent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editstudent</servlet-name>
+        <servlet-class>editstudent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editstudentform</servlet-name>
+        <servlet-class>editstudentform</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -63,6 +91,34 @@
     <servlet-mapping>
         <servlet-name>deleteaccountant</servlet-name>
         <url-pattern>/deleteaccountant</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addstudent</servlet-name>
+        <url-pattern>/addstudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewstudent</servlet-name>
+        <url-pattern>/viewstudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>searchstudent</servlet-name>
+        <url-pattern>/searchstudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>duefee</servlet-name>
+        <url-pattern>/duefee</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>deletestudent</servlet-name>
+        <url-pattern>/deletestudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editstudent</servlet-name>
+        <url-pattern>/editstudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editstudentform</servlet-name>
+        <url-pattern>/editstudentform</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

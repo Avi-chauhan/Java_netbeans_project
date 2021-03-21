@@ -13,6 +13,7 @@ public static int save(acc_info bean){
 	int status=0;
 	try{
 		Connection con=database.getCon();
+                System.out.println("rutvik");
 		PreparedStatement ps=con.prepareStatement("insert into fee_accountant(name,email,password,address,contact) values(?,?,?,?,?)");
 		ps.setString(1,bean.getName());
 		ps.setString(2,bean.getEmail());
