@@ -83,8 +83,10 @@ public class editaccform extends HttpServlet {
                 out.println("</div>");
                 
                 out.println("<div class=\"col-sm-3\">");
-		out.print("<label for=\"b\">Email: </label><input id=\"b\" type='email' class=\"form-control\" name='email' value='"+bean.getEmail()+"'/>");
+		out.print("<label for=\"c\">Email: </label><input id=\"c\" type='email' class=\"form-control\" name='email' value='"+bean.getEmail()+"'/>");
 		out.println("</div>");
+                
+                
                 
                 out.println("<div class=\"col-sm-3\">");
                 out.print("<label for=\"inputFirstname\">Password: </label><input id=\"inputFirstname\" class=\"form-control\" type='text' name='password' value='"+bean.getPassword()+"'/>");

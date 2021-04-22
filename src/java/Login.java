@@ -7,6 +7,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -87,7 +88,6 @@ public class Login extends HttpServlet {
                         out.println("<p>Accountant Login Successful.....</p>");
 			request.getRequestDispatcher("accountantportal.html").forward(request, response);
 		}else{
-			
 			out.println("<p>Sorry, username or password error!</p>");
 			request.getRequestDispatcher("index.html").include(request, response);
 		}
@@ -98,8 +98,8 @@ public class Login extends HttpServlet {
             {
                 
 		if(email.equals("admin@gmail.com")&&password.equals("123456")){
-			HttpSession session=request.getSession();
-			session.setAttribute("admin",role);
+			 Cookie ck=new Cookie("email",email);  
+                         response.addCookie(ck);  
                         out.println("<p>Admin Login Successful.....</p>");
 			request.getRequestDispatcher("adminportal.html").forward(request, response);
 		}else{

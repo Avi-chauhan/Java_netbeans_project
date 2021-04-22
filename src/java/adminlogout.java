@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.out;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -60,10 +61,13 @@ public class adminlogout extends HttpServlet {
  out.println("<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>");
 		out.println("</head>");
 		out.println("<body>");
-		HttpSession session=request.getSession();
-		session.invalidate();
-                out.println("<h1>Admin has been Logged Out!</h1>");
-		request.getRequestDispatcher("index.html").forward(request, response);
+		  
+                  out.println("<h1>Admin has been Logged Out!</h1>");
+		request.getRequestDispatcher("index.html").include(request, response);
+        Cookie ck=new Cookie("email","");
+                ck.setMaxAge(0);  
+        response.addCookie(ck);  
+              
 		
 		
 		
